@@ -122,7 +122,7 @@ For the experimentation process, an input of the quantity of vertices is set and
             Vector v1 = new Vector(p2.x - p1.x, p2.y - p1.y);//1+1
             Vector v2 = new Vector(p3.x - p1.x, p3.y - p1.y);//1+1
                 double cross = v1.cross(v2);//1+1
-                Polygon triangle = new Polygon();
+                Polygon triangle = new Polygon(); //1
                 triangle.addPoint(p1.x, p1.y); //1
                 triangle.addPoint(p2.x, p2.y); //1
                 triangle.addPoint(p3.x, p3.y); //1
@@ -149,7 +149,13 @@ For the experimentation process, an input of the quantity of vertices is set and
         }
     }
 \end{lstlisting}
-
+triangulatePolygon Cost = $(1)*19 +(2)*5+(n)+((n+1)*(1+n))$
+\newline
+$19+10+n+(n+n^2+1+n^2)$
+\newline
+$29+n+(n^2+n+1)$
+$30+n+n^2$
+$$\therefore O(n^2)$$
 \begin{thebibliography}{}
 \bibitem{Polygon Triangulation}Triangulation. (n.d.). Retrieved October 26, 2018, from http://mathworld.wolfram.com/Triangulation.html
 \bibitem{Polygon Triangulation2} Subhash, S. (n.d.). Polygon Triangulation [Blog post]. Retrieved October 28, 2018, from https://www.cs.ucsb.edu/~suri/cs235/Triangulation.pdf
