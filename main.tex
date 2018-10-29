@@ -62,8 +62,10 @@ ibarqueroga@gmail.com, joseph.feng1@gmail.com,paulvillabeita@gmail.com}
 \section{Abstract}
 Abstract here
 \section{Introduction}
-Game figures and models that are visible in a computer screen and pretty much any other polygon can be deconstructed into triangles. This process is called \textbf{triangulation}. It consists of decomposing any polygon into triangles. In the following project, the chosen triangulation approach is the Ear Clipping path in order to "deconstruct" simple polygons into simpler polygons which are: triangles. In the following project, only 2D polygons will be tested and \textbf{non-simple polygons} (meaning one or more vertex are shared among various triangles or edges between two vertices that are intersected by other edge) are not triangulated in this project. Additionally, no vertices will be inserted.
+Game figures and models that are visible in a computer screen and pretty much any other polygon can be deconstructed into triangles. This process is called \textbf{triangulation}. In the following project, the chosen triangulation approach is the Ear Clipping path in order to "deconstruct" simple polygons.. Only 2D and \textbf{non-simple polygons} (meaning one or more vertex are shared among various triangles or edges between two vertices that are intersected by other edge) are tested in this project. Additionally, no additional vertices will be inserted.
 $$\includegraphics[scale=0.8]{nonsimpleExample}$$
+\section{Related Work}
+A similar project related to ours is "Fast Poplygon Triangulation Based on Seidel's Algorithm" conducted by Atul Narkhede and Dinesh Manocha. As the title of the project suggests, the use of the Seidel's Algorithm was key. It uses the structure of undirected, unweighted, and connected graphs. It solves the problem in $O(n*logn)$ with polygons that do not have holes and using a query structure to locate a point in logarithmic time.
 \section{Polygon Triangulation}
 Polygon Triangulation is the decomposition of a polygon in a surface or plane, into a set of triangles, with the restriction that each triangle side is entirely shared by two adjacent triangles. Triangulation can be applied to both convex and concave polygons. Concave polygons are those that have internal angles greater than 180 degrees, convex polygons are the opposite, internal angles sum 180 or less degrees. The Triangulation Theorem states that:
 \begin{itemize}
@@ -101,8 +103,7 @@ $$\includegraphics[scale=0.6]{Typeofpolygons}$$
 \section{Ear Clipping}
 An ear of a polygon is a triangle formed by three consecutive vertices $V_{i0},V_{i1},$ and $V_{i2}$ for which $V_{i1}$ is a convex vertex. The line segment from $V_{i0}$ to $V_{i2}$ lies completely inside the polygon, and no vertices of the polygon are inside the triangle other than its components. The line segment between $V_{i0}$ and $V_{i2}$ is a diagonal of the polygon. The vertex $V_{i1}$ is called the ear tip. A triangle has only one ear and can be any of the triangle's vertices.
 \section{Experimentation}
-\subsection{Random points}
-For the experimentation process, an input of the quantity of vertices is set and are going to be generated procedurally throughout the canvas.
+For the experimentation process
 \section{Code Analysis}
 \begin{lstlisting}
     public void triangulatePolygon() {
@@ -149,7 +150,9 @@ For the experimentation process, an input of the quantity of vertices is set and
         }
     }
 \end{lstlisting}
-triangulatePolygon Cost = $(1)*19 +(2)*5+(n)+((n+1)*(1+n))$
+triangulatePolygon Cost =
+\newline
+$(1)*19 +(2)*5+(n)+((n+1)*(1+n))$
 \newline
 $19+10+n+(n+n^2+1+n^2)$
 \newline
@@ -162,5 +165,6 @@ $$\therefore O(n^2)$$
 \bibitem{Concave Polygon}Concave Polygon Definition. (2011). Retrieved October 26, 2018, from https://www.mathopenref.com/polygonconcave.html
 \bibitem{Triangulation Approaches}Varshosaz, M., Helali, H., \& Shojaee, D. (2017, April 7). The Methods of Triangulation - Geospatial World. Retrieved October 26, 2018, from https://www.geospatialworld.net/article/the-methods-of-triangulation/
 \bibitem{Triangulation by Ear Clipping}Eberly, D. (2015, August 16). Triangulation By Ear Clipping [Blog post]. Retrieved October 28, 2018, from https://www.geometrictools.com/Documentation/TriangulationByEarClipping.pdf
+\bibitem{Fast Polygon Triangulation Based on Seidel's Algorithm} Narkhede, A., Manocha D. [Paper]. Retrieved October 29, 2018, from https://www.sciencedirect.com/science/article/pii/B9780125434577500590
 \end{thebibliography}
 \end{document}
