@@ -67,8 +67,14 @@ $$\includegraphics[scale=0.8]{nonsimpleExample}$$
 \section{Related Work}
 A similar project related to ours is "Fast Poplygon Triangulation Based on Seidel's Algorithm" conducted by Atul Narkhede and Dinesh Manocha. As the title of the project suggests, the use of the Seidel's Algorithm was key. It uses the structure of undirected, unweighted, and connected graphs. It solves the problem in $O(n*logn)$ with polygons that do not have holes and using a query structure to locate a point in logarithmic time.
 
+\section{Computer Graphics}
+The term "computer graphics" refers to anything involved in the creation or manipulation
+of images on computer, including animated images.\cite{ComputerGraphics}. This is a very broad field, because it includes, for example, 2D and 3D images, such as animated images. For this paper we will be focused only on planar objects. Planar objects, sometimes called 2D shapes, are created on a single plane (usually the xy-plane). Focusing on planar objects, 2D primitives like lines, circles, etc. may be used to create more complex shapes.\cite{2DGraphics}. These graphics are often preferred over 3D because they give more control over the images, and it is very easy to escalate or rotate them.\\
+Computer graphics first appeared in the 50's, and one of the firsts and more popular computer game was Spacewar!, developed at MIT by Steve Russell. It took the team about 200 man-hours to write the first version of Spacewar. Russell wrote Spacewar on a PDP-1, an early DEC (Digital Equipment Corporation) interactive mini computer which used a cathode-ray tube type display and keyboard input.\cite{SpaceWar}. Since then, 2D graphics have been being improved and now there are more and better algorithms and techniques that allow us easily keep developing 2D computer graphics.
+
 \section{Polygon Triangulation}
-Polygon Triangulation is the decomposition of a polygon in a surface or plane, into a set of triangles, with the restriction that each triangle side is entirely shared by two adjacent triangles. Triangulation can be applied to both convex and concave polygons. Concave polygons are those that have internal angles greater than 180 degrees, convex polygons are the opposite, internal angles sum 180 or less degrees. The Triangulation Theorem states that:
+Computing the triangulation of a polygon is a fundamental algorithm in computational
+geometry. It also seems to be the most investigated partitioning method\cite{Triangulation}. \\Polygon Triangulation is the decomposition of a polygon in a surface or plane, into a set of triangles, with the restriction that each triangle side is entirely shared by two adjacent triangles. In computer graphics, polygon triangulation algorithms are widely used for tessellating curved geometries. Triangulation can be applied to both convex and concave polygons. Concave polygons are those that have internal angles greater than 180 degrees, convex polygons are the opposite, internal angles sum 180 or less degrees. The Triangulation Theorem states that:
 \begin{itemize}
     \item{Every simple polygon admits a triangulation}
 \item{Every triangulation of an n-gon has exactly $n-2$ triangles}
@@ -223,4 +229,7 @@ After conducting this part of the experiment, the results showed that the amount
     \caption{Totoro Triangulation Results}
     \label{fig:graphtotoro}
 \end{figure}
+
+\bibliographystyle{plain}
+\bibliography{references}
 \end{document}
