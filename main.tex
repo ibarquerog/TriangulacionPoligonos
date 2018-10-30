@@ -161,9 +161,10 @@ $29+n+(n^2+n+1)$
 $30+n+n^2$
 $$\therefore O(n^2)$$
 \section{Results}
+After conducting this part of the experiment, the results showed that the amount of vertices versus time can be different across different polygons based on the contour of the images. This is because there are images that, after enclosing them in a convex hull formed by the vertices, can be simple polygons more than others, that is, that have more edges, bends, curves, etcetera. So, the algorithm needs to check if the new triangle formed by the inclusion of a new vertex is a valid one or not. In synthesis, if a polygon has a lot of vertices, that means that the algorithm will take more time testing each of its vertices; therefore, taking more time to triangulate said polygon. Figure 12 shows the graph corresponding to the Totoro image test, and can give a glimpse of the $n^2$ behaviour even though the line is not very steep.
 \begin{figure}
     \centering
-    \includegraphics[scale=0.2]{spiderman.png}
+    \includegraphics[scale=0.15]{spiderman.png}
     \caption{Test Image}
     \label{fig:testImage}
     \centering
@@ -219,7 +220,7 @@ $$\therefore O(n^2)$$
 \begin{figure}
     \centering
     \includegraphics[scale=0.6]{totoroGraph}
-    \caption{Spider-Man Triangulation Results}
+    \caption{Totoro Triangulation Results}
     \label{fig:graphtotoro}
 \end{figure}
 \end{document}
