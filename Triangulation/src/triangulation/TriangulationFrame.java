@@ -53,14 +53,17 @@ public class TriangulationFrame extends javax.swing.JFrame {
         setSize(this.view.getWidth()+1,this.view.getHeight()+1);
 
         jLabel1.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Points");
         jLabel1.setToolTipText("");
 
-        input.setForeground(new java.awt.Color(0, 0, 0));
         input.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 204), 2, true));
         input.setCaretColor(new java.awt.Color(255, 255, 255));
         input.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        input.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputActionPerformed(evt);
+            }
+        });
 
         generateBtn.setText("Generate");
         generateBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 204), 2, true));
@@ -243,6 +246,10 @@ public class TriangulationFrame extends javax.swing.JFrame {
         this.add(view);
         this.repaint();
     }//GEN-LAST:event_decreaseBtnActionPerformed
+
+    private void inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputActionPerformed
 
     public static void main(String args[]) {
         /* Set the Darcula look and feel */

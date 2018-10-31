@@ -182,6 +182,7 @@ public class View extends JPanel {
             long milli = time - (seconds * 1000) - (minutes * 60000);
             String report = "Time taken: " + minutes + " min " + seconds + " sec " + milli +" ms" ;
             JOptionPane.showMessageDialog(null,report);
+        System.out.println(triangles.size());
     }
     
     public boolean validTriangle(Polygon triangle, Point p1, Point p2, Point p3,ArrayList<Point> points) {
